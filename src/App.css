@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+/* General Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  background-color: #f4f6f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 1em;
+}
+
+/* Wrapper and Main App */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
+  margin-top: 5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Balance Component */
+.balanceComponent {
+  width: 100%;
+  padding: 1.5em;
+  border: 2px solid #cfd8dc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: #252525;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Transaction List */
+.List {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 1.5em;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #444;
+  transition: transform 0.2s ease;
+  
+}
+
+.List:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Add Transaction Button */
+button {
+  background-color: #4CAF50;
   color: white;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:active {
+  transform: scale(0.98);
 }
+
+/* Form Input Fields */
+input[type="text"] {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8em;
+  margin-bottom: 1rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-size: 1em;
+  color: #333;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* Fonts and Colors */
+h1 {
+  color: #333;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+h2 {
+  color: #4CAF50;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.amountText{
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  font-weight: 800;
+}
+.newdiv{
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  align-items: center;
+  padding: 10px;
+}
+
+
